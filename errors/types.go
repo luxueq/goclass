@@ -1,6 +1,6 @@
 package errors
 
-func emptyRow(reason string, message string) *Error {
-
+func EmptyRow(reason string, message string) *Error {
+	return Newf(110001, reason, message)
 }
 

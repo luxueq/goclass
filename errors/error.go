@@ -30,3 +30,7 @@ func (e *Error) Is(err error) bool {
 	}
 	return false
 }
+
+func Newf(code int, reason string, format string, a ...interface{}) *Error {
+	return New(code, reason, fmt.Sprintf(format, a...))
+}
