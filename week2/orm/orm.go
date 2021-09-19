@@ -1,6 +1,8 @@
 package orm
 
-import "Homework/errors"
+import (
+	"Homework/week2/errors"
+)
 
 type OrmHandler struct {
 	//假装是个查询实例
@@ -15,7 +17,7 @@ func (orm *OrmHandler) Query (sql string) (map[string]string, error) {
 }
 
 func New(handlerName string, dbName string, tableName string) *OrmHandler {
-	return &OrmHandler {
+	return &OrmHandler{
 		Name: handlerName,
 		Db: dbName,
 		Table: tableName,

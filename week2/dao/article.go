@@ -1,9 +1,8 @@
 package dao
 
 import (
-	"Homework/orm"
+	"Homework/week2/orm"
 	"errors"
-	"log"
 )
 
 func getUserBySql(sql string) map[string]string {
